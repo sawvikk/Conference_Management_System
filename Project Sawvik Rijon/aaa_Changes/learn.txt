@@ -1,0 +1,44 @@
+functions to be learnt as they are new  : 
+include_once() 
+require_once()
+
+
+
+empty()
+<?php
+$var1 = "";          // An empty string
+$var2 = 0;           // Zero
+$var3 = false;       // Boolean false
+$var4 = null;        // Null value
+$var5 = "Hello";     // A non-empty string
+
+echo empty($var1);  // Output: true
+echo empty($var2);  // Output: true
+echo empty($var3);  // Output: true
+echo empty($var4);  // Output: true
+echo empty($var5);  // Output: false
+?>
+
+
+
+
+ob_start()
+ob_end_flush()
+ob_end_clean()
+
+<?php
+ob_start(); // Start output buffering
+echo "This text is captured by the output buffer.";
+// You can manipulate the captured content here
+$modifiedContent = ob_get_contents();
+$modifiedContent = str_replace("captured", "manipulated", $modifiedContent);
+
+ob_clean(); // Clear the buffer
+
+echo $modifiedContent; // Output the modified content
+
+ob_end_flush(); // End output buffering and send the modified content to the browser
+?>
+
+mysqli_real_escape_string()
+
